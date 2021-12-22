@@ -105,7 +105,7 @@ class DetailWindowClass(WindowClass):
             [sg.Text(("URL"),size=(30,1)),sg.InputText(self.row[1],size=(90,1))],
             [sg.Text(("AccountID"),size=(30,1)),sg.InputText(self.row[2],size=(90,1))],
             [sg.Text(("PASSWORD"),size=(30,1)),sg.InputText(self.row[3],size=(90,1))],
-            [sg.Text(("MEMO"),size=(30,1)),sg.Multiline(self.row[4],size=(90,19))]
+            [sg.Text(("MEMO"),size=(30,1)),sg.Multiline(self.row[4],size=(90,15))]
         ]
         self.layout.append(self.layout_bt)
         self.window = sg.Window(self.name,self.layout,size=(self.size_x,self.size_y))
