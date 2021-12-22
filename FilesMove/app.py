@@ -43,7 +43,7 @@ def get_filenames_list(target_path,items_list):
         filenames_list.append(filenames)
     return filenames_list
 
-#ファイル移動(*configからパス、対象文字に変更？)
+#ファイル移動
 def move_file(target_path,output_items_list):
     for output_items in output_items_list:
         for i in range(1,len(output_items)):
@@ -62,7 +62,7 @@ def main():
     #設定ファイル読み込み
     config = configparser.ConfigParser()
     configpath = join_path(config_filename)
-    config.read(configpath)
+    config.read(configpath,"utf8")
     items_list = get_items_list(config,section2)
     target_path = config.items(section1)[0][1]
     #ディレクトリ作成
